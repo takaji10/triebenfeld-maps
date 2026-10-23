@@ -1,0 +1,22 @@
+{
+  "@context": "http://iiif.io/api/image/3/context.json",
+  "id": "https://takaji10.github.io/triebenfeld-maps/lukom1766",
+  "type": "ImageService3",
+  "profile": "level0",
+  "protocol": "http://iiif.io/api/image",
+  "tiles": [
+    {
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "width": 512
+    }
+  ],
+  "width": 10280,
+  "height": 8523
+}

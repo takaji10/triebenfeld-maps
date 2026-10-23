@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warp test</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
+  #bar { padding: 6px 10px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  #map { height: calc(100vh - 44px); }
+</style>
+</head>
+<body>
+<div id="bar">
+  <span id="name">Loading...</span>
+  <label>Opacity <input id="op" type="range" min="0" max="1" step="0.05" value="0.7"></label>
+</div>
+<div id="map"></div>
+<script type="module">
+import L from 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/+esm'
+import { WarpedMapLayer } from 'https://cdn.jsdelivr.net/npm/@allmaps/leaflet@1.0.0-beta.54/+esm'
+
+const key = new URLSearchParams(location.search).get('map') || 'lukom1766'
+const map = L.map('map', { center: [52.12, 17.82], zoom: 13, zoomAnimationThreshold: 1 })
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map)
+
+const layer = new WarpedMapLayer().addTo(map)
+const annotation = await (await fetch(key + '/georef.json')).json()
+await layer.addGeoreferenceAnnotation(annotation)
+layer.setOpacity(0.7)
+document.getElementById('op').addEventListener('input', e => layer.setOpacity(+e.target.value))
+document.getElementById('name').textContent =
+  'Map: ' + key + ' (' + annotation.body.features.length + ' control points, order ' +
+  annotation.body.transformation.options.order + ')'
+try { const b = layer.getBounds(); if (b) map.fitBounds(b) } catch (e) {}
+</script>
+</body>
+</html>
