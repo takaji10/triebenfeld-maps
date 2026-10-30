@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/kozlowski1861",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 15757,
+      "height": 12140
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"15757\" height=\"12140\"><polygon points=\"0,0 15757,0 15757,12140 0,12140\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            8786,
+            2992
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9617452614,
+            52.1413637396
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11556,
+            5897
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9959058754,
+            52.1195045826
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            1124,
+            10637
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8681683533,
+            52.0831125519
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            6574,
+            4929
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9346549504,
+            52.1267175117
+          ]
+        }
+      }
+    ]
+  }
+}
