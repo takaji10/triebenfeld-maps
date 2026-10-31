@@ -1,0 +1,23 @@
+{
+  "@context": "http://iiif.io/api/image/3/context.json",
+  "id": "https://takaji10.github.io/triebenfeld-maps/pelzucki1896",
+  "type": "ImageService3",
+  "profile": "level0",
+  "protocol": "http://iiif.io/api/image",
+  "tiles": [
+    {
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "width": 512
+    }
+  ],
+  "width": 21715,
+  "height": 14206
+}

@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/pelzucki1896",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 21715,
+      "height": 14206
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"21715\" height=\"14206\"><polygon points=\"0,0 21715,0 21715,14206 0,14206\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            12202,
+            9080
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9232689731,
+            52.1038033698
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11335,
+            13414
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9219546907,
+            52.0895139542
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            8176,
+            9294
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9024443023,
+            52.1013419357
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11348,
+            7886
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9180118435,
+            52.1072003871
+          ]
+        }
+      }
+    ]
+  }
+}
