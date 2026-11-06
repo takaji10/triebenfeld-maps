@@ -9,11 +9,17 @@
   body { margin: 0; font: 14px/1.4 system-ui, sans-serif; }
   #bar { padding: 6px 10px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
   #map { height: calc(100vh - 44px); }
+  #bases button { font: inherit; padding: 2px 8px; border: 1px solid #999; background: #fff; border-radius: 3px; cursor: pointer; }
+  #bases button.on { background: #0a5da8; color: #fff; border-color: #0a5da8; }
 </style>
 </head>
 <body>
 <div id="bar">
   <span id="name">Loading...</span>
+  <span id="bases">
+    <button id="b-osm" class="on">OpenStreetMap</button>
+    <button id="b-sat">Satellite</button>
+  </span>
   <label>Opacity <input id="op" type="range" min="0" max="1" step="0.05" value="0.7"></label>
 </div>
 <div id="map"></div>
@@ -21,12 +27,29 @@
 import L from 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/+esm'
 import { WarpedMapLayer } from 'https://cdn.jsdelivr.net/npm/@allmaps/leaflet@1.0.0-beta.54/+esm'
 
-const key = new URLSearchParams(location.search).get('map') || 'lukom1766'
+const params = new URLSearchParams(location.search)
+const key = params.get('map') || 'lukom1766'
 const map = L.map('map', { center: [52.12, 17.82], zoom: 13, zoomAnimationThreshold: 1 })
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map)
+const bases = {
+  osm: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }),
+  sat: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 19,
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
+  })
+}
+let base = bases[params.get('base') || 'osm'] || bases.osm
+base.addTo(map)
+document.getElementById('b-osm').onclick = () => setBase('osm')
+document.getElementById('b-sat').onclick = () => setBase('sat')
+function setBase(name) {
+  if (base === bases[name]) return
+  map.removeLayer(base); base = bases[name]; base.addTo(map)
+  document.getElementById('b-osm').className = name === 'osm' ? 'on' : ''
+  document.getElementById('b-sat').className = name === 'sat' ? 'on' : ''
+}
 
 const layer = new WarpedMapLayer().addTo(map)
 const annotation = await (await fetch(key + '/georef.json')).json()
