@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/hollring1804",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 18001,
+      "height": 13822
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"18001\" height=\"13822\"><polygon points=\"0,0 18001,0 18001,13822 0,13822\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2015,
+            5425
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7832388871,
+            52.1073091137
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            7682,
+            1538
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8051471703,
+            52.1149654381
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11235,
+            11622
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8119921677,
+            52.0918936441
+          ]
+        }
+      }
+    ]
+  }
+}

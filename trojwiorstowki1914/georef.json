@@ -1,0 +1,113 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/trojwiorstowki1914",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 9763,
+      "height": 7173
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"9763\" height=\"7173\"><polygon points=\"0,0 9763,0 9763,7173 0,7173\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3243,
+            4563
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.6875269406,
+            52.1654365704
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            5080,
+            3226
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8731572621,
+            52.2866753153
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            5434,
+            5326
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.959057688,
+            52.1411859591
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            9389,
+            1205
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.3315226428,
+            52.4815273352
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            8163,
+            6649
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.296042382,
+            52.0767844139
+          ]
+        }
+      }
+    ]
+  }
+}

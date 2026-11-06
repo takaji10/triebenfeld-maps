@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/weydner1804",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 13759,
+      "height": 11670
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"13759\" height=\"11670\"><polygon points=\"0,0 13759,0 13759,11670 0,11670\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            13147,
+            8081
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8053617471,
+            52.1149127312
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            4456,
+            8681
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7833032601,
+            52.1072168608
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2489,
+            6910
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7754712098,
+            52.1087719554
+          ]
+        }
+      }
+    ]
+  }
+}

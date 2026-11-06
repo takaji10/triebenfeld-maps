@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/perthees1798",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 6848,
+      "height": 7536
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"6848\" height=\"7536\"><polygon points=\"0,0 6848,0 6848,7536 0,7536\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            1819,
+            2721
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.6879882805,
+            52.1685623844
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3262,
+            2542
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9001617424,
+            52.1681412349
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            4273,
+            2493
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.052082061,
+            52.153293168
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3094,
+            4712
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8714942925,
+            51.9749412628
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            5035,
+            3362
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.1667089455,
+            52.0705641947
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2120,
+            3793
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7380704872,
+            52.0667389809
+          ]
+        }
+      }
+    ]
+  }
+}

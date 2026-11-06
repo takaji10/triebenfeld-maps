@@ -1,0 +1,177 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/slupca1957",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 6132,
+      "height": 8286
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"6132\" height=\"8286\"><polygon points=\"0,0 6132,0 6132,8286 0,8286\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3151,
+            5427
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9557371133,
+            52.1421538668
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3084,
+            5649
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9475831978,
+            52.1253211271
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3229,
+            5587
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9650068276,
+            52.1300897318
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2817,
+            5822
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9128646843,
+            52.1119874027
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2261,
+            5583
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8444147102,
+            52.1306991299
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            2831,
+            6374
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9161262505,
+            52.0698325265
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            4261,
+            4100
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.092658519,
+            52.2428023527
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            4174,
+            1564
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.0828309051,
+            52.4363317941
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            1643,
+            1501
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7688193313,
+            52.4413520948
+          ]
+        }
+      }
+    ]
+  }
+}
