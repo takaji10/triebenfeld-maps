@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/pambo1803",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 24801,
+      "height": 19218
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"24801\" height=\"19218\"><polygon points=\"0,0 24801,0 24801,19218 0,19218\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            9415,
+            13914
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8681468956,
+            52.0830400282
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11969,
+            7476
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.852675914,
+            52.0733669451
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            19917,
+            7442
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8293514244,
+            52.0792290705
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            23356,
+            10959
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8235471241,
+            52.088114756
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/krolikow1800",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 18824,
+      "height": 15343
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"18824\" height=\"15343\"><polygon points=\"0,0 18824,0 18824,15343 0,15343\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            10620,
+            3511
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8682327263,
+            52.0828817942
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            11534,
+            6661
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8805923455,
+            52.057926552
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            12071,
+            9126
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8859996789,
+            52.0373398562
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            14897,
+            2627
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.9237222664,
+            52.0896853488
+          ]
+        }
+      }
+    ]
+  }
+}
