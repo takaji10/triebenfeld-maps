@@ -1,0 +1,113 @@
+{
+  "@context": [
+    "http://iiif.io/api/extension/georef/1/context.json",
+    "http://iiif.io/api/presentation/3/context.json"
+  ],
+  "type": "Annotation",
+  "motivation": "georeferencing",
+  "target": {
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://takaji10.github.io/triebenfeld-maps/zagorow1841",
+      "type": "ImageService3",
+      "profile": "level0",
+      "width": 8916,
+      "height": 5470
+    },
+    "selector": {
+      "type": "SvgSelector",
+      "value": "<svg width=\"8916\" height=\"5470\"><polygon points=\"0,0 8916,0 8916,5470 0,5470\" /></svg>"
+    }
+  },
+  "body": {
+    "type": "FeatureCollection",
+    "transformation": {
+      "type": "polynomial",
+      "options": {
+        "order": 1
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3765,
+            3630
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.863937,
+            52.159822
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3236,
+            3499
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.8525,
+            52.163056
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            3366,
+            4464
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.855218,
+            52.142252
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            5087,
+            1194
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.899722,
+            52.180833
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "resourceCoords": [
+            5283,
+            2461
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.90016,
+            52.16899
+          ]
+        }
+      }
+    ]
+  }
+}
