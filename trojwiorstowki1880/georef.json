@@ -8,7 +8,7 @@
   "target": {
     "type": "SpecificResource",
     "source": {
-      "id": "https://takaji10.github.io/triebenfeld-maps/trojwiorstowki1914",
+      "id": "https://takaji10.github.io/triebenfeld-maps/trojwiorstowki1880",
       "type": "ImageService3",
       "profile": "level0",
       "width": 9763,

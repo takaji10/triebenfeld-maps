@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/image/3/context.json",
-  "id": "https://takaji10.github.io/triebenfeld-maps/trojwiorstowki1914",
+  "id": "https://takaji10.github.io/triebenfeld-maps/trojwiorstowki1880",
   "type": "ImageService3",
   "profile": "level0",
   "protocol": "http://iiif.io/api/image",
